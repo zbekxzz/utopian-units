@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Utopian Units</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-section">
+            <a href="/shymbulak" class="nav-link">Shymbulak</a>
+            <a href="/burabai" class="nav-link">Burabai</a>
+        </div>
+        <a href="/" class="nav-logo">UTOPIAN UNITS</a>
+        <div class="nav-section">
+            <a href="/about" class="nav-link">About us</a>
+            <a href="/profile" class="nav-link"><img width="25" height="25" src="https://img.icons8.com/ios/50/gender-neutral-user--v1.png" alt="user"/></a>
+            <a href="/help" class="nav-link"><img width="25" height="25" src="https://img.icons8.com/ios/50/help--v1.png" alt="help"/></a>
+        </div>
+    </nav>
+
+    <header class="profile-header">
+        <div class="about-title">Profile</div>
+        <hr class="hr-green">
+        <form action="/logout" method="get">
+            <button class="subscribe-btn" type="submit">Logout</button>
+        </form>
+    </header>
+
+    <section class="profile">
+        <div id="profile-info" class="profile-left">
+            
+        </div>
+        <div class="profile-right">
+            <div class="profile-title">Edit information</div>
+            <hr class="hr-green hr-left">
+            <form>
+                <div class="setting-wrapper">
+                    <label for="fullname">Full name</label>
+                    <input id="fullname" type="text" placeholder="Full name">
+                </div>
+                <div class="setting-wrapper">
+                    <label for="email">Email</label>
+                    <input id="email" type="text" placeholder="Email">
+                </div>
+                <div class="setting-wrapper">
+                    <label for="phone">Phone number</label>
+                    <input id="phone" type="text" placeholder="Phone number">
+                </div>
+                <button id="updateProfile">Save</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="contacts">
+        <div class="follow-us">
+            <div class="contacts-title">Follow us</div>
+            <div class="contacts-text contacts-margin">And keep up to date with Soho Hotel</div>
+            <div class="social-links">
+                <a href="" class="social-link"><img width="24" height="24" src="https://img.icons8.com/material-outlined/24/FFFFFF/facebook-f.png" alt="facebook-f"/></a>
+                <a href="" class="social-link"><img width="24" height="24" src="https://img.icons8.com/material-outlined/24/FFFFFF/instagram-new--v1.png" alt="instagram-new--v1"/></a>
+                <a href="" class="social-link"><img width="24" height="24" src="https://img.icons8.com/ios-glyphs/24/FFFFFF/twitter--v1.png" alt="twitter--v1"/></a>
+            </div>
+        </div>
+        <div class="contact">
+            <div class="contacts-title">Contact</div>
+            <div class="contacts-info">
+                <div class="contact-wrapper">
+                    <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/75b970/marker.png" alt="marker"/>
+                    <div class="contacts-text">Kazakhstan, Astana, Mangilik el st., 55/11</div>
+                </div>
+                <div class="contact-wrapper">
+                    <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/75b970/phone.png" alt="phone"/>
+                    <div class="contacts-text">+7 (776) 949 05 02</div>
+                </div>
+                <div class="contact-wrapper">
+                    <img width="20" height="20" src="https://img.icons8.com/ios-glyphs/50/75b970/new-post.png" alt="new-post"/>
+                    <div class="contacts-text">support@utopianunits.com</div>
+                </div>
+            </div>
+        </div>
+        <div class="newsletter">
+            <div class="contacts-title">Newsletter</div>
+            <div class="contacts-text contacts-margin">Sign up to our newsletter for exclusive offers.</div>
+            <form action="/subscribe" method="post">
+                <input class="subscribe-input" type="email" name="subscribe" id="subscribe">
+                <button class="subscribe-btn" type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-rights">© 2024 Utopian Units. All Rights Reserved</div>
+        <a href="/" class="footer-link">UTOPIAN UNITS</a>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsonwebtoken/8.5.1/jsonwebtoken.min.js"></script>
+    <script>
+        let userId;
+        const updateBtn = document.getElementById("updateProfile").addEventListener('click', function(event) {
+            event.preventDefault();
+            updateProfile();
+        })
+        async function updateProfile() {
+            try {
+                const inputName = document.getElementById("fullname").value;
+                const inputEmail = document.getElementById("email").value;
+                const inputPhone = document.getElementById("phone").value;
+                const requestBody = {}; 
+
+                if (inputName.trim() !== '') { requestBody.fullName = inputName.trim(); }
+
+                if (inputEmail.trim() !== '') { requestBody.email = inputEmail.trim(); }
+
+                if (inputPhone.trim() !== '') { requestBody.phone = inputPhone.trim(); }
+
+                await fetch(`/api/user/${userId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(requestBody)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    getProfile();
+                    inputName.value = "";
+                    inputEmail.value = "";
+                    inputPhone.value = "";
+                });
+            } catch (error) {
+                
+            }
+        }
+
+        async function getProfile() {
+            const profileDiv = document.getElementById("profile-info");
+            try {
+                await fetch(`/api/user/1`, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data)
+                    userId = data._id;
+                    profileDiv.innerHTML = `
+                    <div class="profile-title">Welcome, ${data.username} ${data.role == "ADMIN" ? `<a href='/admin' class='role'>${data.role}</a>` : `<p class="role">${data.role}</p>`} </div>
+                    <hr class="hr-green hr-left">
+                    <div class="profile-info">
+                        <div class="profile-text">Profile info</div>
+                        <div class="profile-wrapper">
+                            <label>Full Name</label>
+                            <span>${data.fullName ? data.fullName : "Not set yet"}</span>
+                        </div>
+                        <div class="profile-wrapper">
+                            <label>Email</label>
+                            <span>${data.email}</span>
+                        </div>
+                        <div class="profile-wrapper">
+                            <label>Phone number</label>
+                            <span>${data.phone ? data.phone : "Not set yet"}</span>
+                        </div>
+                    </div>
+                    `;
+                });
+            } catch (error) {
+                
+            }
+        }
+        getProfile()
+    </script>
+    
+</body> 
+</html>

@@ -1,0 +1,981 @@
+@import url('https://fonts.googleapis.com/css2?family=Rhodium+Libre&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    top: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
+
+.hr-green {
+    margin: 0 auto;
+    width: 50px;
+    border: 1px solid #75b970;
+}
+
+/*  NAVIGATION  */
+
+nav {
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-link {
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-section {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-logo {
+    font-family: 'Rhodium Libre', serif;
+    font-size: 30px;
+    color: #000;
+    text-decoration: none;
+}
+
+
+/*  HEADER  */
+.main-header {
+    height: 700px;
+    background-image: url(img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.header-title {
+    font-size: 48px;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+.header-text {
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+}
+
+.header-subs {
+    display: flex;
+    gap: 20px   ;
+}
+
+.btn {
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    padding: 22px 40px;
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+
+/*  WELCOME  */
+.welcome {
+    height: 40vh;
+    background-color: #f2f2f3;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.welcome-title {
+    font-size: 35px;
+}
+
+.welcome-text {
+    text-align: center;
+    width: 800px;
+    color: #656a70;
+    font-size: 15px;
+}
+
+.welcome-btn {
+    background-color: #75b970;
+    color: #fff;
+}
+
+
+
+/*  QUOTE  */
+.quote {
+    height: 550px;
+    display: flex;
+}
+
+.quote-img {
+    width: 50%;
+    height: 100%;
+    background-color: #75b970;
+}
+
+.quote-right {
+    width: 50%;
+    display: flex;
+    padding: 200px 0 0 60px;
+    gap: 20px;
+}
+
+.quote-text {
+    font-size: 25px;
+    width: 80%;
+    margin-bottom: 90px;
+}
+
+.quote-author {
+    color: #656a70;
+    font-size: 15px;
+}
+
+
+
+/*  OFFERS  */
+.offers {
+    height: 70vh;
+    background-color: #f2f2f3;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.offers-title {
+    font-size: 35px;
+}
+
+.offers-list {
+    display: flex;
+    gap: 30px;
+}
+
+.offer-img {
+    width: 400px;
+    height: 250px;
+    background-color: #75b970;
+}
+
+.offer-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.offer-wrapper-text {
+    font-size: 24px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.offer-wrapper-hr {
+    border: 1px solid #dedede;
+}
+
+.offer-sale {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+/*  CONTACTS  */
+.contacts {
+    height: 35vh;
+    display: flex;
+    gap: 120px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts-title {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.contacts-margin {
+    margin-bottom: 27px;
+}
+
+.contact-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.contacts-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contacts-text {
+    font-size: 15px;
+    color: #656a70;
+}
+
+.subscribe-input {
+    border: #75b970 2px solid;
+    padding: 17.5px 15px;
+    margin-right: 10px;
+}
+
+.subscribe-btn {
+    color: #fff;
+    background: #75b970;
+    border: 0;
+    padding: 20px 15px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-link {
+    padding: 15px;
+    background-color: #75b970;
+    border-radius: 50%;
+}
+
+
+
+/*  FOOTER  */
+footer {
+    color: #fff;
+    height: 100px;
+    background-color: #75b970;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-link {
+    font-family: 'Rhodium Libre', serif;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+/*  ABOUT  */
+.about-header {
+    padding: 140px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background-color: #75b9707d;
+}
+
+.about-title {
+    font-size: 30px;
+    color: #181b20;
+}
+
+.about-text {
+    font-size: 15px;
+    color: #656a70;
+}
+
+
+
+/*  HOTELS  */
+.hotels-wrapper {
+    height: 40vh;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hotel-img {
+    width: 30%;
+    height: 400px;
+    background-color: #75b970;
+}
+
+.hotel-block {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.block-right {
+    margin-left: 60px;
+}
+
+.hotel-title {
+    font-size: 28px;
+}
+
+.hr-left {
+    margin: 0;
+}
+
+.hotel-text {
+    color: #656a70;
+    font-size: 15px;
+    line-height: 180%;
+}
+
+.text-left {
+    margin-right: 60px;
+}
+
+
+
+/*  FACILITIES  */
+.facilities {
+    margin-top: 100px;
+    padding-top: 70px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    background-color: #f2f2f3;
+}
+
+.facilities-title {
+    font-size: 28px;
+}
+
+.facilities-goods {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.good-wrapper {
+    width: 530px;
+    display: flex;
+    gap: 20px;
+}
+
+.good-title {
+    font-size: 20px;
+}
+
+.good-text {
+    color: #656a70;
+    font-size: 15px;
+    line-height: 180%;
+}
+
+
+
+/*  LOGIN  */
+.form-section {
+    padding: 50px 15% 0 15%;
+    margin: 0 auto;
+    height: 65vh;
+    border-bottom: 1px solid #656a7057;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.form-title {
+    font-size: 20px;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-section label {
+    font-size: 15px;
+    color: #656a70;
+}
+
+.form-section input {
+    font-size: 15px;
+    color: #656a70;
+    border: 1px solid #dedede;
+    padding: 16px 12px;
+}
+
+.form-section button {
+    width: 100px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    border: 0;
+    font-size: 14px;
+    background-color: #75b970;
+    padding: 20px 25px;
+}
+
+.form-redirect {
+    font-size: 15px;
+    color: #656a70;
+}
+
+.form-link {
+    color: #75b970;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-link:hover {
+    color: #51844e;
+}
+
+.form-btn-response {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.form-btn-response p {
+    font-size: 12px;
+    color: #656a70;
+}
+
+
+
+/*  LOCATION FACILITIES  */
+.location-facilities {
+    background-color: #f2f2f3;
+    padding-top: 50px;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.facilities-title {
+    font-size: 28px;
+}
+
+.facilities-flex {
+    display: flex;
+    gap: 50px;
+}
+
+.facilities-flex .wrapper {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.facilities-flex h3 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.facilities-flex p {
+    text-align: center;
+    font-size: 15px;
+    color: #656a70;
+}
+
+
+
+/*  HELP  */
+.help {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.help-right {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    width: 30%;
+}
+
+.help-text {
+    font-size: 15px;
+    color: #656a70;
+}
+
+.help-title {
+    font-size: 20px;
+}
+
+.help-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.help input,
+.help textarea {
+    width: 590px;
+    color: #656a70;
+    border: 1px solid #dedede
+}
+
+.help textarea {
+    height: 250px;
+}
+
+.help input {
+    padding: 16px 12px;
+}
+
+.help label {
+    font-size: 15px;
+    color: #181b20;
+}
+
+#helpForm {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#helpForm button {
+    cursor: pointer;
+    width: 110px;
+    color: #fff;
+    font-weight: 500;
+    padding: 20px 30px;
+    background-color: #75b970;
+    border: 0;
+    transition: background-color .2s linear;
+}
+
+#helpForm button:hover {
+    background-color: #51844e;
+}
+
+.bb {
+    border-bottom: 1px solid rgba(101, 106, 112, 0.309);
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+iframe {
+    margin: 50px 0;
+}
+
+
+
+/*  LOCATION  */
+.location {
+    padding: 140px 0 140px 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #75b9707d;
+}
+
+.location-title {
+    font-size: 70px;
+    font-weight: 300;
+}
+
+.location-btn {
+    cursor: pointer;
+    width: fit-content;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 17px 30px;
+    background-color: #75b970;
+    transition: background-color .2s linear;
+}
+
+.location-btn:hover {
+    background-color: #51844e;
+}
+
+
+
+/*  ROOMS  */
+.rooms {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.rooms-title {
+    font-size: 28px;
+
+}
+
+.rooms-text {
+    width: 650px;
+    text-align: center;
+    font-size: 15px;
+    color: #656a70;
+}
+
+.rooms-wrapper {
+    border: 1px solid #94949463;
+    display: flex;
+    flex-direction: column;
+}
+
+.rooms-flex {
+    display: flex;
+    gap: 30px;
+}
+
+.room-img {
+    background-size: cover;
+    width: 380px;
+    height: 230px;
+}
+
+.room-name {
+    padding: 30px;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+.hr-grey {
+    color: #94949431;
+}
+
+.room-subs {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.room-sub {
+    display: flex;
+    gap: 10px;
+}
+
+.room-btn {
+    width: fit-content;
+    color: #fff;
+    background-color: #75b970;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 18px 30px;
+}
+
+span {
+    color: #656a70;
+}
+
+
+/*  YURT PAGE  */
+.yurt {
+    padding: 75px 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    border-bottom: 1px solid #7c7e814e;
+}
+
+.booking {
+    width: 400px;
+}
+
+.yurt-info {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 75px;
+}
+
+.yurt-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.yurt-name {
+    font-size: 30px;
+}
+
+.yurt-subs {
+    display: flex;
+    gap: 15px;
+}
+
+.yurt-subs div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.yurt-subs p {
+    font-size: 15px;
+}
+
+.yurt-image {
+    height: 550px;
+    width: 800px;
+    background-color: #75b970;
+}
+
+.yurt-section {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.yurt-subtitle {
+    text-align: center;
+    font-size: 25px;
+}
+
+.yurt-text {
+    line-height: 180%;
+    text-align: center;
+    font-size: 15px;
+    color: #656a70;
+}
+
+.yurt-facilities {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.siu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.yurt-fac-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.rule-wrapper {
+    width: 600px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 30px;
+    border-top: 1px solid #7c7e814e;
+}
+
+.rule-wrapper p {
+    font-size: 15px;
+    color: #656a70;
+}
+
+.profile-header {
+    padding: 75px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #75b9707d;
+}
+
+.profile-title {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.profile-left {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.role {
+    text-decoration: none;
+    background-color: #75b970;
+    color: #fff;
+    font-weight: 500;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profile-text {
+    font-size: 18px;
+}
+
+.profile-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-wrapper label {
+    font-size: 15px;
+}
+
+.profile-wrapper span {
+    font-size: 16px;
+}
+
+.profile-right {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.profile-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.setting-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.setting-wrapper label {
+    font-size: 15px;
+    color: #656a70; 
+}
+
+.setting-wrapper input {
+    font-size: 15px;
+    color: #656a70;
+    border: 1px solid #dedede;
+    padding: 16px 12px;
+}
+
+.profile-right button {
+    margin: 0 auto;
+    width: 100px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    border: 0;
+    font-size: 14px;
+    background-color: #75b970;
+    padding: 20px 25px;
+    transition: background-color .2s linear;
+}
+
+.profile-right button:hover {
+    background-color: #51844e;
+}
+
+
+.admin {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.users,
+.yurts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+}
+
+.users-title {
+    font-size: 28px;
+}
+
+#users {
+    width: 80%;
+    display: flex;
+    gap: 30px;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+#users::-webkit-scrollbar {
+    display: none;
+}
+
+.user-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+    padding: 10px 20px;
+    border: 1px solid #656a7047;
+    border-radius: 10px;
+}
+
+.username {
+    font-size: 18px;
+    overflow-x: hidden;
+}
+
+.btns {
+    display: flex;
+    gap: 20px;
+}
+
+.user-btn {
+    padding: 5px 10px;
+    border: 1px solid #51844e;
+    color: #fff;
+    font-weight: 500;
+    background-color: #75b970;
+    transition: background-color .2s linear;
+}
+
+.user-btn:hover {
+    background-color: #51844e;
+}
+
