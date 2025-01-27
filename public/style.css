@@ -129,7 +129,9 @@ nav {
 .quote-img {
     width: 50%;
     height: 100%;
-    background-color: #75b970;
+/*     background-color: #75b970; */
+    background-image: url(https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/fa/47/c5.jpg)
+    background-size: cover;
 }
 
 .quote-right {
@@ -175,7 +177,22 @@ nav {
 .offer-img {
     width: 400px;
     height: 250px;
-    background-color: #75b970;
+/*     background-color: #75b970; */
+}
+
+.offer-img-nauryz {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1436v9nBlMY5E_GGVdxaxRuSBVbCCSDOlkQ&s);
+    background-size: cover
+}
+
+.offer-img-april {
+    background-image: url(https://mysl.kazgazeta.kz/wp-content/uploads/2020/07/Qozy-bayan.jpg);
+    background-size: cover
+}
+
+.offer-img-family {
+    background-image: url(https://24.kz/media/k2/items/cache/7de5edc3d41351322e824b64cb12043b_XL.jpg?t=20240705_165842);
+    background-size: cover
 }
 
 .offer-wrapper {
