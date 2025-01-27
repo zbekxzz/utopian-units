@@ -23,6 +23,10 @@ const userSchema = new mongoose.Schema({
     password: {
       type: String,
       required: true
+    },
+    cardNumber: {
+      type: String,
+      default: "0"
     }
 });
 

@@ -288,12 +288,15 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    background-color: #75b9707d;
+    /* background-color: #75b9707d; */
+    background-image: url(https://www.vika-tur.kz/media/k2/items/cache/36fdb1a35cd2f54f95cf2119fb5bc7ed_L.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .about-title {
     font-size: 30px;
-    color: #181b20;
+    color: #fff;
 }
 
 .about-text {
@@ -315,7 +318,22 @@ footer {
 .hotel-img {
     width: 30%;
     height: 400px;
-    background-color: #75b970;
+    /* background-color: #75b970; */
+}
+
+.hotel-img-location {
+    background-image: url(https://img.pac.ru/resorts/213169/491628/big/41B1C0B57F00010117C747A8135F07DF.jpg);
+    background-size: cover;
+}
+
+.hotel-img-services {
+    background-image: url(https://shatry-tenty.ru/wp-content/uploads/2018/05/tyurkskaya-model-yurty.jpg);
+    background-size: cover;
+}
+
+.hotel-img-yurts {
+    background-image: url(https://el.kz/upload/storage_el/40/40c21e0834d590c786e97613a33fba13.jpg);
+    background-size: cover;
 }
 
 .hotel-block {
@@ -400,6 +418,10 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 32px;
+}
+
+.register {
+    height: 75vh;
 }
 
 .form-title {
@@ -599,10 +621,23 @@ iframe {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    background-color: #75b9707d;
+    /* background-color: #75b9707d; */
+}
+
+.location-burabai {
+    background-image: url(https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcS0QQCoIEsHFU159_pzRwR5VmJXRnr8A5T9U6B6-TM3RsrSnT4pbeeAoUqLvCbUVPM9UBCnJo57cDJj94DMqyY9Wh6H3HSX2Fj5WXbAqhE);
+    background-size: cover;
+    background-position: center;
+}
+
+.location-shymbulak {
+    background-image: url(https://thetripgoeson.com/wp-content/uploads/2021/10/Big-Almaty-Lake-4.jpg.webp);
+    background-size: cover;
+    background-position: center;
 }
 
 .location-title {
+    color: #fff;
     font-size: 70px;
     font-weight: 300;
 }
@@ -653,8 +688,13 @@ iframe {
 
 .rooms-flex {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
     gap: 30px;
 }
+
+
 
 .room-img {
     background-size: cover;

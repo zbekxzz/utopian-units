@@ -4,7 +4,7 @@ const House = require('../model/house');
 exports.create = async (req, res) => {
     const { houseName, location, description, photo, pricePerNight, facilities, capacity, size, view, houseRules } = req.body;
 
-    if (!houseName || !description || !photo || !pricePerNight || !facilities || !capacity || !size || !view || !houseRules) {
+    if (!houseName || !location || !description || !photo || !pricePerNight || !facilities || !capacity || !size || !view || !houseRules) {
         return res.status(400).json({ message: "All fields are required!" });
     }
     
