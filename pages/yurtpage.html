@@ -21,74 +21,28 @@
     </nav>
 
     <div class="yurt">
-        <div class="yurt-info">
-            <div class="yurt-main">
-                <div class="yurt-name">Deluxe Queen Room</div>
-                <div class="yurt-subs">
-                    <div>
-                        <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/75b970/shopping-bag.png" alt="shopping-bag"/>
-                        <p><span>Sleeps: </span>2 Adults</p>
-                    </div>
-                    <div>
-                        <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/75b970/shopping-bag.png" alt="shopping-bag"/>
-                        <p><span>Size: </span>35sqm</p>
-                    </div>
-                    <div>
-                        <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/75b970/shopping-bag.png" alt="shopping-bag"/>
-                        <p><span>View: </span>City</p>
-                    </div>
+        <div class="yurt-info" id="yurt-info">
+            
+        </div>
+        <div class="booking">
+            <div class="booking-container">
+                <h2>Бронирование</h2>
+                <div class="form-group">
+                    <label class="booking-label" for="checkin">Check-in Date</label>
+                    <input class="booking-input" type="date" id="checkin">
                 </div>
-                <div class="yurt-image"></div>
-            </div>
-            <div class="yurt-section">
-                <div class="yurt-subtitle">Yurt Description</div>
-                <hr class="hr-green">
-                <p class="yurt-text">Phasellus at congue lectus, sit amet tincidunt nunc. Vivamus fermentum nunc ac dui faucibus consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin hendrerit sit amet est at laoreet. Nam auctor rhoncus accumsan. Morbi et turpis ac ligula tempor tincidunt.</p>
-            </div>
-            <div class="yurt-section">
-                <div class="yurt-subtitle">Facilities</div>
-                <hr class="hr-green">
-                <div class="yurt-facilities">
-                    <div class="siu">
-                        <div class="yurt-fac-wrapper">
-                            <img width="25" height="25" src="https://img.icons8.com/ios-glyphs/25/75b970/add-to-shopping-basket--v1.png" alt="add-to-shopping-basket--v1"/>
-                            <p>Central heating</p>
-                        </div>
-                        <div class="yurt-fac-wrapper">
-                            <img width="25" height="25" src="https://img.icons8.com/ios-glyphs/25/75b970/add-to-shopping-basket--v1.png" alt="add-to-shopping-basket--v1"/>
-                            <p>Swimming pool</p>
-                        </div>
-                    </div>
-                    <div class="siu">
-                        <div class="yurt-fac-wrapper">
-                            <img width="25" height="25" src="https://img.icons8.com/ios-glyphs/25/75b970/add-to-shopping-basket--v1.png" alt="add-to-shopping-basket--v1"/>
-                            <p>Hot tub</p>
-                        </div>
-                        <div class="yurt-fac-wrapper">
-                            <img width="25" height="25" src="https://img.icons8.com/ios-glyphs/25/75b970/add-to-shopping-basket--v1.png" alt="add-to-shopping-basket--v1"/>
-                            <p>Child friendly </p>
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label class="booking-label" for="checkout">Check-out Date</label>
+                    <input class="booking-input" type="date" id="checkout">
                 </div>
-            </div>
-            <div class="yurt-section">
-                <div class="yurt-subtitle">House Rules</div>
-                <hr class="hr-green">
-                <div class="rule-wrapper">
-                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/75b970/do-not-disturb.png" alt="do-not-disturb"/>
-                    <p>Quiet hours after 10 PM strictly enforced.</p>
+                <div class="form-group">
+                    <label class="booking-label" for="guests">Number of Guests</label>
+                    <select class="booking-select" id="guests">
+                    </select>
                 </div>
-                <div class="rule-wrapper">
-                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/75b970/do-not-disturb.png" alt="do-not-disturb"/>
-                    <p>Quiet hours after 10 PM strictly enforced.</p>
-                </div>
-                <div class="rule-wrapper">
-                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/75b970/do-not-disturb.png" alt="do-not-disturb"/>
-                    <p>Quiet hours after 10 PM strictly enforced.</p>
-                </div>
+                <button class="booking-button" id="book-btn">Book Now</button>
             </div>
         </div>
-        <div class="booking"></div>
     </div>
 
     <section class="contacts">
@@ -128,6 +82,28 @@
         </div>
     </section>
 
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 style="margin-bottom: 10px;">Enter Card Details</h2>
+            <div class="form-group">
+                <label class="booking-label card-label">Card Number</label>
+                <input class="booking-input" type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19">
+            </div>
+            <div class="inline-fields">
+                <div class="form-group">
+                    <label class="booking-label card-label">Expiration (mm/yy)</label>
+                    <input class="booking-input" type="text" id="expiry-date" placeholder="MM/YY" maxlength="5">
+                </div>
+                <div class="form-group">
+                    <label class="booking-label card-label">Security Code</label>
+                    <input class="booking-input" type="text" id="cvv" placeholder="123" maxlength="3">
+                </div>
+            </div>
+            <button id="pay-btn" class="booking-button">Pay Now</button>
+        </div>
+    </div>
+
     <footer>
         <div class="footer-rights">© 2024 Utopian Units. All Rights Reserved</div>
         <a href="/" class="footer-link">UTOPIAN UNITS</a>
@@ -136,10 +112,11 @@
     <script>
         const currentUrl = window.location.href.split("/");
         const yurtId = currentUrl[currentUrl.length-1];
+        let data;
         async function getYurts() {
             const currentUrl = window.location.href;
             try {
-                await fetch(`api/yurt/${yurtId}`, {
+                await fetch(`http://localhost:3000/api/yurt/${yurtId}`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json'
@@ -147,15 +124,141 @@
                 })
                 .then(response => response.json())
                 .then(data => {
-                    const roomDiv = document.getElementById("room");
-                    data.forEach((yurt) => {
-                        
-                    })
+                    console.log(data);
+                    const yurtDiv = document.getElementById("yurt-info");
+                    yurtDiv.innerHTML += `
+                        <div class="yurt-main">
+                            <div class="yurt-name">${data.houseName}</div>
+                            <div class="yurt-subs">
+                                <div>
+                                    <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/75b970/shopping-bag.png" alt="shopping-bag"/>
+                                    <p><span>Sleeps: </span>${data.capacity} Adults</p>
+                                </div>
+                                <div>
+                                    <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/75b970/shopping-bag.png" alt="shopping-bag"/>
+                                    <p><span>Size: </span>${data.size}sqm</p>
+                                </div>
+                                <div>
+                                    <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/75b970/shopping-bag.png" alt="shopping-bag"/>
+                                    <p><span>View: </span>${data.view}</p>
+                                </div>
+                            </div>
+                            <div class="yurt-image" style="background-image: url(${data.photo});"></div>
+                        </div>
+                        <div class="yurt-section">
+                            <div class="yurt-subtitle">Yurt Description</div>
+                            <hr class="hr-green">
+                            <p class="yurt-text">${data.description}</p>
+                        </div>
+                        <div class="yurt-section">
+                            <div class="yurt-subtitle">Facilities</div>
+                            <hr class="hr-green">
+                            <div class="yurt-facilities">
+                                <div class="siu">
+                                    <div class="yurt-fac-wrapper">
+                                        <img width="25" height="25" src="https://img.icons8.com/ios-glyphs/25/75b970/add-to-shopping-basket--v1.png" alt="add-to-shopping-basket--v1"/>
+                                        <p>${data.facilities[0]}</p>
+                                    </div>
+                                    <div class="yurt-fac-wrapper">
+                                        <img width="25" height="25" src="https://img.icons8.com/ios-glyphs/25/75b970/add-to-shopping-basket--v1.png" alt="add-to-shopping-basket--v1"/>
+                                        <p>${data.facilities[1]}</p>
+                                    </div>
+                                </div>
+                                <div class="siu">
+                                    <div class="yurt-fac-wrapper">
+                                        <img width="25" height="25" src="https://img.icons8.com/ios-glyphs/25/75b970/add-to-shopping-basket--v1.png" alt="add-to-shopping-basket--v1"/>
+                                        <p>${data.facilities[2]}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="yurt-section">
+                            <div class="yurt-subtitle">Supplementary Activities</div>
+                            <hr class="hr-green">
+                            <div class="activities-wrapper">
+                                <label class="activity-container">Cooking National Foods
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="activity-container">Traditional games and entertainment
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="activity-container">Horseback riding and excursions
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="yurt-section">
+                            <div class="yurt-subtitle">House Rules</div>
+                            <hr class="hr-green">
+                            <div class="rule-wrapper">
+                                <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/75b970/do-not-disturb.png" alt="do-not-disturb"/>
+                                <p>${data.houseRules[0]}</p>
+                            </div>
+                            <div class="rule-wrapper">
+                                <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/75b970/do-not-disturb.png" alt="do-not-disturb"/>
+                                <p>${data.houseRules[1]}</p>
+                            </div>
+                        </div>
+                    `
+                    const select = document.getElementById("guests");
+                    for (let index = 1; index <= data.capacity; index++) {
+                        select.innerHTML += `<option value="${index}">${index} guests</option>`
+                    }
                 });
             } catch (error) {
                 console.log(error);
             }
         }
+        getYurts();
+
+        const bookBtn = document.getElementById("book-btn");
+        const modal = document.getElementById("payment-modal");
+        const closeModal = document.querySelector(".close");
+        const payBtn = document.getElementById("pay-btn");
+
+        // Show the modal when "Book Now" is clicked
+        bookBtn.addEventListener("click", function() {
+            const checkin = document.getElementById("checkin").value;
+            const checkout = document.getElementById("checkout").value;
+            const guests = document.getElementById("guests").value;
+
+            if (!checkin || !checkout) {
+                alert("Please select check-in and check-out dates.");
+                return;
+            }
+
+            modal.style.display = "flex"; // Show modal
+        });
+
+        // Close the modal when clicking the close button
+        closeModal.addEventListener("click", function() {
+            modal.style.display = "none";
+        });
+
+        // Close modal when clicking outside of it
+        window.addEventListener("click", function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+
+        // Simulate payment processing
+        payBtn.addEventListener("click", function() {
+            const cardNumber = document.getElementById("card-number").value;
+            const expiryDate = document.getElementById("expiry-date").value;
+            const cvv = document.getElementById("cvv").value;
+
+            if (!cardNumber || !expiryDate || !cvv) {
+                alert("Please fill in all card details.");
+                return;
+            }
+
+            alert("Payment successful! Your booking is confirmed.");
+            modal.style.display = "none";
+        })
     </script>
     
 </body> 

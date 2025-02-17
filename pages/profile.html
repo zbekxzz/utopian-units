@@ -28,6 +28,10 @@
         </form>
     </header>
 
+    <form>
+        
+    </form>
+
     <section class="profile">
         <div id="profile-info" class="profile-left">
             
@@ -167,7 +171,7 @@
                         </div>
                         <div class="profile-wrapper">
                             <label>Payment card number</label>
-                            <span>${data.cardNumber ? data.phone : "<button>Set up payment card</button>"}</span>
+                            <span>${data.cardNumber ? data.phone : "<button id='card-btn'>Set up payment card</button>"}</span>
                         </div>
                     </div>
                     `;
@@ -177,6 +181,10 @@
             }
         }
         getProfile()
+
+        async function updateCardNumber() {
+            
+        }
     </script>
     
 </body> 

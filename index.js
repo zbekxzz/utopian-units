@@ -3,6 +3,7 @@ const path = require('path');
 const bcrypt = require('bcryptjs');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const cors = require('cors');
 require('dotenv').config();
 
 const jwt = require('jsonwebtoken');
@@ -30,6 +31,10 @@ const port = 3000;
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors({
+    origin: '*', // или укажи конкретный фронтовый URL
+    methods: ['GET', 'POST', 'PATCH', 'DELETE']
+}));
 
 const dbConfig = require('./config/database.config.js');
 const mongoose = require('mongoose');
