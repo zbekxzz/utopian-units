@@ -116,7 +116,7 @@
         async function getYurts() {
             const currentUrl = window.location.href;
             try {
-                await fetch(`http://localhost:3000/api/yurt/${yurtId}`, {
+                await fetch(`https://utopian-units.onrender.com/api/yurt/${yurtId}`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json'
